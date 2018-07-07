@@ -25,16 +25,19 @@ class Solution:
 
     def removeDuplicates(self, head):
         ### My Code Here ###
+        
         if head == None:
             return head
         elif head.next == None:
             return head
         else:
             current = head
-            while current.next != None:
-                if current.data == current.next.data
+            while current.next:
+                if current.data == current.next.data:
                     current.next = current.next.next
-                current = current.next
+                else:
+                    current = current.next
+                
             return head
         ### My Code To Here###
 
